@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed -Wl,-O1 -Wl,-z,defs
+export DEB_BUILD_MAINT_OPTIONS=hardening=+pie,+bindnow
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian/xfce4-places-plugin -name '*.la' -delete
