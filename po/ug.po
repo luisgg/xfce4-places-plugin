@@ -1,0 +1,225 @@
+# Uyghur translations for Thunar package.
+# Copyright (C) 2004-2007 Benedikt Meurer.
+# This file is distributed under the same license as the Thunar package.
+# Gheyret T.Kenji <gheyret@gmail.com>, 2010.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-28 17:07+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. vim: set ai et tabstop=4:
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
+#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
+msgid "Places"
+msgstr "ئورۇنلار"
+
+#: ../panel-plugin/places.desktop.in.h:2
+msgid "Access folders, documents, and removable media"
+msgstr "مۇندەرىجە، پۈتۈك ۋە يۆتكىلىشچان ۋاسىتىنى زىيارەت قىلىش"
+
+#. Trash
+#: ../panel-plugin/model_system.c:155
+msgid "Trash"
+msgstr "ئەخلەتخانا"
+
+#: ../panel-plugin/model_system.c:189
+msgid "Desktop"
+msgstr "ئۈستەلئۈستى"
+
+#. File System (/)
+#: ../panel-plugin/model_system.c:205
+msgid "File System"
+msgstr "ھۆججەت سىستېمىسى"
+
+#: ../panel-plugin/model_volumes.c:71
+#, c-format
+msgid "Failed to eject \"%s\""
+msgstr "«%s» نى چىقىرالمىدى"
+
+#: ../panel-plugin/model_volumes.c:120
+#, c-format
+msgid "Failed to unmount \"%s\""
+msgstr "«%s» ئېگەرسىزلەش مەغلۇپ بولدى"
+
+#: ../panel-plugin/model_volumes.c:170 ../panel-plugin/model_volumes.c:193
+#, c-format
+msgid "Failed to mount \"%s\""
+msgstr "«%s» نى ئېگەرلەش مەغلۇپ بولدى"
+
+#: ../panel-plugin/model_volumes.c:478
+msgid "Mount and Open"
+msgstr "ئېگەرلەش ۋە ئېچىش"
+
+#: ../panel-plugin/model_volumes.c:491
+msgid "Mount"
+msgstr "ئېگەرلە"
+
+#: ../panel-plugin/model_volumes.c:511
+msgid "Eject"
+msgstr "چىقار"
+
+#: ../panel-plugin/model_volumes.c:521
+msgid "Unmount"
+msgstr "ئېگەرسىزلە"
+
+#. TRANSLATORS: Please use the same translation here as in Thunar
+#: ../panel-plugin/model_volumes_notify.c:128
+msgid "Unmounting device"
+msgstr "ئۈسكۈنىنى ئېگەرسىزلەۋاتىدۇ"
+
+#. TRANSLATORS: Please use the same translation here as in Thunar
+#: ../panel-plugin/model_volumes_notify.c:131
+#, c-format
+msgid ""
+"The device \"%s\" is being unmounted by the system. Please do not remove the "
+"media or disconnect the drive"
+msgstr ""
+"سىستېما ئۈسكۈنىسى «%s» نى ئېگەرسىزلەۋاتىدۇ. دىسكىنى چىقارماڭ ياكى ئۈسكۈنىنى "
+"كومپيۇتېردىن ئايرىۋەتمەڭ."
+
+#. TRANSLATORS: Please use the same translation here as in Thunar
+#: ../panel-plugin/model_volumes_notify.c:138
+#: ../panel-plugin/model_volumes_notify.c:262
+msgid "Writing data to device"
+msgstr "سانلىق-ئاساسلارنى ئۈسكىنىگە يېزىۋاتىدۇ"
+
+#. TRANSLATORS: Please use the same translation here as in Thunar
+#: ../panel-plugin/model_volumes_notify.c:141
+#: ../panel-plugin/model_volumes_notify.c:265
+#, c-format
+msgid ""
+"There is data that needs to be written to the device \"%s\" before it can be "
+"removed. Please do not remove the media or disconnect the drive"
+msgstr ""
+"ئۈسكۈنە \"%s\" چىقىرىشتىن بۇرۇن بىر يېزىشقا تېگىشلىك سانلىق ئاسالار بار."
+"دىسكىنى چىقارماق ياكى ئۈسكۈنىنى كومپيۇتېردىن ئايرىۋەتمەڭ."
+
+#. TRANSLATORS: Please use the same translation here as in Thunar
+#: ../panel-plugin/model_volumes_notify.c:253
+msgid "Ejecting device"
+msgstr "ئۈسكۈنە چىقىرىش"
+
+#. TRANSLATORS: Please use the same translation here as in Thunar
+#: ../panel-plugin/model_volumes_notify.c:256
+#, c-format
+msgid "The device \"%s\" is being ejected. This may take some time"
+msgstr "ئۈسكۈنە \"%s\" نى چىقىرىۋاتىدۇ. ئازراق ۋاقىت كېتىشى مۇمكىن."
+
+#: ../panel-plugin/view.c:637
+msgid "Search for Files"
+msgstr "ھۆججەت ئىزدەش"
+
+#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
+msgid "Recent Documents"
+msgstr "يېقىنقى پۈتۈكلەر"
+
+#: ../panel-plugin/cfg.c:442
+msgid "Button"
+msgstr "توپچا"
+
+#: ../panel-plugin/cfg.c:451
+msgid "_Show"
+msgstr "كۆرسەت(_S)"
+
+#: ../panel-plugin/cfg.c:457
+msgid "Icon Only"
+msgstr "سىنبەلگىنىلا"
+
+#: ../panel-plugin/cfg.c:458
+msgid "Label Only"
+msgstr "ئەننىلا"
+
+#: ../panel-plugin/cfg.c:459
+msgid "Icon and Label"
+msgstr "سىنبەلگە ۋە ئەن"
+
+#: ../panel-plugin/cfg.c:472
+msgid "_Label"
+msgstr "ئەن(_L)"
+
+#: ../panel-plugin/cfg.c:488
+msgid "Menu"
+msgstr "تىزىملىك"
+
+#. MENU: Show Icons
+#: ../panel-plugin/cfg.c:492
+msgid "Show _icons in menu"
+msgstr "تىزىملىكنىڭ ئىچىدە سىنبەلگە كۆرسەتسۇن(_I):"
+
+#. MENU: Show Removable Media
+#: ../panel-plugin/cfg.c:501
+msgid "Show _removable media"
+msgstr "چىقارغىلى بولىدىغان ۋاسىتىنى كۆرسەتسۇن(_R)"
+
+#: ../panel-plugin/cfg.c:519
+msgid "Mount and _Open on click"
+msgstr "چېكىپلا ئېگەرلىسۇن ۋە ئاچسۇن(_O)"
+
+#. MENU: Show GTK Bookmarks
+#: ../panel-plugin/cfg.c:530
+msgid "Show GTK _bookmarks"
+msgstr "GTK خەتكۈچلىرىنى كۆرسەت(_B)"
+
+#. MENU: Show Recent Documents
+#: ../panel-plugin/cfg.c:540
+msgid "Show recent _documents"
+msgstr "يېقىنقى پۈتۈكلەرنى كۆرسەت(_D)"
+
+#. RECENT DOCUMENTS: Show clear option
+#: ../panel-plugin/cfg.c:559
+msgid "Show cl_ear option"
+msgstr "تازىلاش تاللانمىسىنى كۆرسەت(_E)"
+
+#: ../panel-plugin/cfg.c:571
+msgid "_Number to display"
+msgstr "كۆرسىتىدىغان سان"
+
+#: ../panel-plugin/cfg.c:591
+msgid "Search"
+msgstr "ئىزدە"
+
+#: ../panel-plugin/cfg.c:599
+msgid "Co_mmand"
+msgstr "بۇيرۇق(_M)"
+
+#: ../panel-plugin/support.c:155
+msgid "Open"
+msgstr "ئاچ"
+
+#: ../panel-plugin/support.c:170
+msgid "Open Terminal Here"
+msgstr "بۇ يەردە تېرمىنالنى ئاچ"
+
+#: ../panel-plugin/xfce4-popup-places.sh:28
+msgid "Usage:"
+msgstr ""
+
+#: ../panel-plugin/xfce4-popup-places.sh:29
+msgid "OPTION"
+msgstr ""
+
+#: ../panel-plugin/xfce4-popup-places.sh:31
+msgid "Options:"
+msgstr ""
+
+#: ../panel-plugin/xfce4-popup-places.sh:32
+msgid "Popup menu at current mouse position"
+msgstr ""
+
+#: ../panel-plugin/xfce4-popup-places.sh:33
+#, fuzzy
+msgid "Show help options"
+msgstr "تازىلاش تاللانمىسىنى كۆرسەت(_E)"
+
+#: ../panel-plugin/xfce4-popup-places.sh:34
+msgid "Print version information and exit"
+msgstr ""
