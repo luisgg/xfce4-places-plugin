@@ -1,3 +1,11 @@
+xfce4-places-plugin (1.5.0-0ubuntu1~ppa0.12.04.1+aurex1) precise; urgency=low
+
+  * Added 30_places-plugin_add_network_menu.patch. The patch
+    adds 'Network' and 'Connect to Server' items.
+  * Updated spanish translation
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 27 Nov 2012 08:57:37 +0100
+
 xfce4-places-plugin (1.5.0-0ubuntu1~ppa0.12.04.1) precise; urgency=low
 
   * Precise backport for the xfce-4.10 ppa.

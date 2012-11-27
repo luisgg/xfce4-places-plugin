@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-28 17:07+0100\n"
+"POT-Creation-Date: 2012-11-27 01:15+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian Translation Team <xfce-it-translators@googlegroups."
@@ -33,8 +33,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
-#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
+#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
 msgid "Places"
 msgstr "Risorse"
 
@@ -132,80 +132,88 @@ msgstr ""
 "Il dispositivo «%s» sta per essere espulso. Potrebbe essere necessario un "
 "po' di tempo"
 
-#: ../panel-plugin/view.c:637
+#: ../panel-plugin/view.c:633
+msgid "Network"
+msgstr ""
+
+#: ../panel-plugin/view.c:651
+msgid "Connect to Server"
+msgstr ""
+
+#: ../panel-plugin/view.c:680
 msgid "Search for Files"
 msgstr "Ricerca file"
 
-#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
+#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
 msgid "Recent Documents"
 msgstr "Documenti recenti"
 
-#: ../panel-plugin/cfg.c:442
+#: ../panel-plugin/cfg.c:490
 msgid "Button"
 msgstr "Pulsante"
 
-#: ../panel-plugin/cfg.c:451
+#: ../panel-plugin/cfg.c:499
 msgid "_Show"
 msgstr "_Mostra"
 
-#: ../panel-plugin/cfg.c:457
+#: ../panel-plugin/cfg.c:505
 msgid "Icon Only"
 msgstr "Solo icona"
 
-#: ../panel-plugin/cfg.c:458
+#: ../panel-plugin/cfg.c:506
 msgid "Label Only"
 msgstr "Solo etichetta"
 
-#: ../panel-plugin/cfg.c:459
+#: ../panel-plugin/cfg.c:507
 msgid "Icon and Label"
 msgstr "Icona ed etichetta"
 
-#: ../panel-plugin/cfg.c:472
+#: ../panel-plugin/cfg.c:520
 msgid "_Label"
 msgstr "_Etichetta"
 
-#: ../panel-plugin/cfg.c:488
+#: ../panel-plugin/cfg.c:536
 msgid "Menu"
 msgstr "Menu"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:492
+#: ../panel-plugin/cfg.c:540
 msgid "Show _icons in menu"
 msgstr "Mostra le _icone nel menu"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:501
+#: ../panel-plugin/cfg.c:549
 msgid "Show _removable media"
 msgstr "Mostra i supporti _rimovibili"
 
-#: ../panel-plugin/cfg.c:519
+#: ../panel-plugin/cfg.c:567
 msgid "Mount and _Open on click"
 msgstr "M_onta e apri con un clic"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:530
+#: ../panel-plugin/cfg.c:578
 msgid "Show GTK _bookmarks"
 msgstr "Mostra i segnali_bri GTK"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:588
 msgid "Show recent _documents"
 msgstr "Mostra _documenti recenti"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:559
+#: ../panel-plugin/cfg.c:607
 msgid "Show cl_ear option"
 msgstr "Mostra l'opzione di pu_litura"
 
-#: ../panel-plugin/cfg.c:571
+#: ../panel-plugin/cfg.c:619
 msgid "_Number to display"
 msgstr "_Numero da visualizzare"
 
-#: ../panel-plugin/cfg.c:591
+#: ../panel-plugin/cfg.c:639
 msgid "Search"
 msgstr "Cerca"
 
-#: ../panel-plugin/cfg.c:599
+#: ../panel-plugin/cfg.c:647
 msgid "Co_mmand"
 msgstr "Coman_do"
 
