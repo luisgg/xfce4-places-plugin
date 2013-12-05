@@ -1,33 +1,33 @@
-# Dutch translation of the xfce4-places-plugin package.
-# Copyright (C) The Xfce development team.
-# This file is distributed under the same license as the
-# xfce4-places-plugin package.
-# Vincent Tunru <imnotb@gmail.com>, 2006.
-# Pjotr, 2011.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Pjotr123 <pjotrvertaalt@gmail.com>, 2013
+# Vincent Tunru <imnotb@gmail.com>, 2006
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-places-plugin\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 01:15+0100\n"
-"PO-Revision-Date: 2011-09-09 12:05+0200\n"
-"Last-Translator: Pjotr\n"
-"Language-Team: Dutch\n"
-"Language: nl (Dutch)\n"
+"POT-Creation-Date: 2013-11-10 18:31+0100\n"
+"PO-Revision-Date: 2013-11-11 11:45+0000\n"
+"Last-Translator: Pjotr123 <pjotrvertaalt@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/xfce/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
-#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
+#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
 msgid "Places"
 msgstr "Locaties"
 
 #: ../panel-plugin/places.desktop.in.h:2
 msgid "Access folders, documents, and removable media"
-msgstr "Toegang tot mappen, documenten en verwijderbare media"
+msgstr "Toegang tot mappen, documenten en verwijderbare opslagmedia"
 
 #. Trash
 #: ../panel-plugin/model_system.c:155
@@ -43,20 +43,26 @@ msgstr "Bureaublad"
 msgid "File System"
 msgstr "Bestandssysteem"
 
+#. TRANSLATORS: this will result in "<path> on <hostname>"
+#: ../panel-plugin/model_user.c:242
+#, c-format
+msgid "%s on %s"
+msgstr "%s op %s"
+
 #: ../panel-plugin/model_volumes.c:71
 #, c-format
 msgid "Failed to eject \"%s\""
-msgstr "Kon \"%s\" niet uitwerpen"
+msgstr "Kon '%s' niet uitwerpen"
 
 #: ../panel-plugin/model_volumes.c:120
 #, c-format
 msgid "Failed to unmount \"%s\""
-msgstr "Kon \"%s\" niet ontkoppelen"
+msgstr "Kon '%s' niet ontkoppelen"
 
 #: ../panel-plugin/model_volumes.c:170 ../panel-plugin/model_volumes.c:193
 #, c-format
 msgid "Failed to mount \"%s\""
-msgstr "Kon \"%s\" niet aankoppelen"
+msgstr "Kon '%s' niet aankoppelen"
 
 #: ../panel-plugin/model_volumes.c:478
 msgid "Mount and Open"
@@ -83,11 +89,9 @@ msgstr "Apparaat aan het ontkoppelen"
 #: ../panel-plugin/model_volumes_notify.c:131
 #, c-format
 msgid ""
-"The device \"%s\" is being unmounted by the system. Please do not remove the "
-"media or disconnect the drive"
-msgstr ""
-"Het apparaat '%s' wordt ontkoppeld door het systeem. Verwijder a.u.b. de "
-"media niet, noch verbreek de verbinding met het station."
+"The device \"%s\" is being unmounted by the system. Please do not remove the"
+" media or disconnect the drive"
+msgstr "Het apparaat '%s' wordt ontkoppeld door het systeem. Verwijder a.u.b. het opslagmedium niet, noch verbreek de verbinding met het station."
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:138
@@ -100,12 +104,9 @@ msgstr "Gegevens aan het schrijven naar apparaat"
 #: ../panel-plugin/model_volumes_notify.c:265
 #, c-format
 msgid ""
-"There is data that needs to be written to the device \"%s\" before it can be "
-"removed. Please do not remove the media or disconnect the drive"
-msgstr ""
-"Er zijn gegevens die geschreven moeten worden naar het apparaat '%' voordat "
-"het verwijderd kan worden. Verwijder a.u.b. de media niet, noch verbreek de "
-"verbinding met het station."
+"There is data that needs to be written to the device \"%s\" before it can be"
+" removed. Please do not remove the media or disconnect the drive"
+msgstr "Er zijn gegevens die geschreven moeten worden naar het apparaat '%s' voordat het verwijderd kan worden. Verwijder a.u.b. het opslagmedium niet, noch verbreek de verbinding met het station."
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:253
@@ -118,88 +119,80 @@ msgstr "Apparaat aan het uitwerpen"
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr "Het apparaat '%s' wordt uitgeworpen. Dit kan enige tijd duren"
 
-#: ../panel-plugin/view.c:633
-msgid "Network"
-msgstr ""
-
-#: ../panel-plugin/view.c:651
-msgid "Connect to Server"
-msgstr ""
-
-#: ../panel-plugin/view.c:680
+#: ../panel-plugin/view.c:637
 msgid "Search for Files"
 msgstr "Bestanden zoeken"
 
-#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
+#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
 msgid "Recent Documents"
 msgstr "Recente documenten"
 
-#: ../panel-plugin/cfg.c:490
+#: ../panel-plugin/cfg.c:442
 msgid "Button"
 msgstr "Knop"
 
-#: ../panel-plugin/cfg.c:499
+#: ../panel-plugin/cfg.c:451
 msgid "_Show"
 msgstr "_Weergeven"
 
-#: ../panel-plugin/cfg.c:505
+#: ../panel-plugin/cfg.c:457
 msgid "Icon Only"
 msgstr "Alleen pictogram"
 
-#: ../panel-plugin/cfg.c:506
+#: ../panel-plugin/cfg.c:458
 msgid "Label Only"
 msgstr "Alleen etiket"
 
-#: ../panel-plugin/cfg.c:507
+#: ../panel-plugin/cfg.c:459
 msgid "Icon and Label"
 msgstr "Pictogram en etiket"
 
-#: ../panel-plugin/cfg.c:520
+#: ../panel-plugin/cfg.c:472
 msgid "_Label"
 msgstr "_Etiket"
 
-#: ../panel-plugin/cfg.c:536
+#: ../panel-plugin/cfg.c:488
 msgid "Menu"
 msgstr "Menu"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:492
 msgid "Show _icons in menu"
-msgstr "_Pictogrammen in menu weergeven"
+msgstr "Toon _pictogrammen in menu"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:549
+#: ../panel-plugin/cfg.c:501
 msgid "Show _removable media"
-msgstr "Ver_wijderbare media weergeven"
+msgstr "Toon ver_wijderbare media"
 
-#: ../panel-plugin/cfg.c:567
+#: ../panel-plugin/cfg.c:519
 msgid "Mount and _Open on click"
 msgstr "Aankoppelen en _openen bij klikken"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:578
+#: ../panel-plugin/cfg.c:530
 msgid "Show GTK _bookmarks"
 msgstr "GTK-_bladwijzers weergeven"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:588
+#: ../panel-plugin/cfg.c:540
 msgid "Show recent _documents"
 msgstr "_Recente documenten weergeven"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:607
+#: ../panel-plugin/cfg.c:559
 msgid "Show cl_ear option"
 msgstr "V_erwijder-optie weergeven"
 
-#: ../panel-plugin/cfg.c:619
+#: ../panel-plugin/cfg.c:571
 msgid "_Number to display"
 msgstr "_Aantal weer te geven"
 
-#: ../panel-plugin/cfg.c:639
+#: ../panel-plugin/cfg.c:591
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../panel-plugin/cfg.c:647
+#: ../panel-plugin/cfg.c:599
 msgid "Co_mmand"
 msgstr "_Opdracht"
 
@@ -209,29 +202,28 @@ msgstr "Openen"
 
 #: ../panel-plugin/support.c:170
 msgid "Open Terminal Here"
-msgstr "Hier een terminalvenster openen"
+msgstr "Open hier een terminalvenster"
 
 #: ../panel-plugin/xfce4-popup-places.sh:28
 msgid "Usage:"
-msgstr ""
+msgstr "Gebruik:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:29
 msgid "OPTION"
-msgstr ""
+msgstr "OPTIE"
 
 #: ../panel-plugin/xfce4-popup-places.sh:31
 msgid "Options:"
-msgstr ""
+msgstr "Opties:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:32
 msgid "Popup menu at current mouse position"
-msgstr ""
+msgstr "Opduikmenu op de huidige muispositie"
 
 #: ../panel-plugin/xfce4-popup-places.sh:33
-#, fuzzy
 msgid "Show help options"
-msgstr "V_erwijder-optie weergeven"
+msgstr "Toon hulpopties"
 
 #: ../panel-plugin/xfce4-popup-places.sh:34
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Druk versie-informatie af en sluit af"

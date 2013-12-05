@@ -1,27 +1,27 @@
-# This file was automatically generated for the xfce4-places-plugin (2007)
-# This file is distributed under the same license as the xfce4-places-plugin package
-# European Portuguese translations for Thunar package.
-# Copyright (C) 2004-2006 Benedikt Meurer.
-# This file is distributed under the same license as the Thunar package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Nuno Miguel <nunis@netcabo.pt>, 2008
-# ###
+# Sérgio Marques <smarquespt@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce 4-battery-plugin\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 01:15+0100\n"
-"PO-Revision-Date: 2012-01-09 15:38-0000\n"
+"POT-Creation-Date: 2013-11-10 18:31+0100\n"
+"PO-Revision-Date: 2013-11-11 22:09+0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
-"Language-Team: \n"
-"Language: \n"
+"Language-Team: Portuguese (http://www.transifex.com/projects/p/xfce/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
-#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
+#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
 msgid "Places"
 msgstr "Locais"
 
@@ -42,6 +42,12 @@ msgstr "Ambiente de trabalho"
 #: ../panel-plugin/model_system.c:205
 msgid "File System"
 msgstr "Sistema de ficheiros"
+
+#. TRANSLATORS: this will result in "<path> on <hostname>"
+#: ../panel-plugin/model_user.c:242
+#, c-format
+msgid "%s on %s"
+msgstr "%s em %s"
 
 #: ../panel-plugin/model_volumes.c:71
 #, c-format
@@ -83,11 +89,9 @@ msgstr "Desmontar dispositivo"
 #: ../panel-plugin/model_volumes_notify.c:131
 #, c-format
 msgid ""
-"The device \"%s\" is being unmounted by the system. Please do not remove the "
-"media or disconnect the drive"
-msgstr ""
-"O dispositivo \"%s\" está a ser desmontado do sistema. Por favor, não remova "
-"ou desligue a unidade"
+"The device \"%s\" is being unmounted by the system. Please do not remove the"
+" media or disconnect the drive"
+msgstr "O dispositivo \"%s\" está a ser desmontado do sistema. Por favor, não remova ou desligue a unidade"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:138
@@ -100,11 +104,9 @@ msgstr "Escrever dados no dispositivo"
 #: ../panel-plugin/model_volumes_notify.c:265
 #, c-format
 msgid ""
-"There is data that needs to be written to the device \"%s\" before it can be "
-"removed. Please do not remove the media or disconnect the drive"
-msgstr ""
-"Antes de poder remover, existem dados que precisam a ser escritos no "
-"dispositivo \"%s\". Por favor, não remova ou desligue a unidade"
+"There is data that needs to be written to the device \"%s\" before it can be"
+" removed. Please do not remove the media or disconnect the drive"
+msgstr "Antes de poder remover, existem dados que precisam a ser escritos no dispositivo \"%s\". Por favor, não remova ou desligue a unidade"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:253
@@ -115,90 +117,82 @@ msgstr "Ejetar dispositivo"
 #: ../panel-plugin/model_volumes_notify.c:256
 #, c-format
 msgid "The device \"%s\" is being ejected. This may take some time"
-msgstr "O dispositivo \"%s\" está a ser ejetado. Por favor, aguarde..."
+msgstr "O dispositivo \"%s\" está a ser ejetado. Por favor aguarde..."
 
-#: ../panel-plugin/view.c:633
-msgid "Network"
-msgstr ""
-
-#: ../panel-plugin/view.c:651
-msgid "Connect to Server"
-msgstr ""
-
-#: ../panel-plugin/view.c:680
+#: ../panel-plugin/view.c:637
 msgid "Search for Files"
 msgstr "Procurar ficheiros"
 
-#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
+#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
 msgid "Recent Documents"
 msgstr "Documentos recentes"
 
-#: ../panel-plugin/cfg.c:490
+#: ../panel-plugin/cfg.c:442
 msgid "Button"
 msgstr "Botão"
 
-#: ../panel-plugin/cfg.c:499
+#: ../panel-plugin/cfg.c:451
 msgid "_Show"
 msgstr "Mo_strar"
 
-#: ../panel-plugin/cfg.c:505
+#: ../panel-plugin/cfg.c:457
 msgid "Icon Only"
 msgstr "Só ícones"
 
-#: ../panel-plugin/cfg.c:506
+#: ../panel-plugin/cfg.c:458
 msgid "Label Only"
 msgstr "Só texto"
 
-#: ../panel-plugin/cfg.c:507
+#: ../panel-plugin/cfg.c:459
 msgid "Icon and Label"
 msgstr "Ícones e texto"
 
-#: ../panel-plugin/cfg.c:520
+#: ../panel-plugin/cfg.c:472
 msgid "_Label"
 msgstr "_Texto"
 
-#: ../panel-plugin/cfg.c:536
+#: ../panel-plugin/cfg.c:488
 msgid "Menu"
 msgstr "Menu"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:492
 msgid "Show _icons in menu"
 msgstr "Mostrar í_cones no menu"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:549
+#: ../panel-plugin/cfg.c:501
 msgid "Show _removable media"
 msgstr "Mostra_r dispositivos amovíveis"
 
-#: ../panel-plugin/cfg.c:567
+#: ../panel-plugin/cfg.c:519
 msgid "Mount and _Open on click"
 msgstr "M_ontar e abrir ao clicar"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:578
+#: ../panel-plugin/cfg.c:530
 msgid "Show GTK _bookmarks"
-msgstr "Mostrar mar_cadores GTK"
+msgstr "_Mostrar marcadores GTK"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:588
+#: ../panel-plugin/cfg.c:540
 msgid "Show recent _documents"
 msgstr "Mostrar _documentos recentes"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:607
+#: ../panel-plugin/cfg.c:559
 msgid "Show cl_ear option"
 msgstr "Mostrar opção d_e limpar"
 
-#: ../panel-plugin/cfg.c:619
+#: ../panel-plugin/cfg.c:571
 msgid "_Number to display"
 msgstr "_Número a exibir"
 
-#: ../panel-plugin/cfg.c:639
+#: ../panel-plugin/cfg.c:591
 msgid "Search"
 msgstr "Procurar"
 
-#: ../panel-plugin/cfg.c:647
+#: ../panel-plugin/cfg.c:599
 msgid "Co_mmand"
 msgstr "Co_mando"
 
@@ -212,25 +206,24 @@ msgstr "Abrir terminal aqui"
 
 #: ../panel-plugin/xfce4-popup-places.sh:28
 msgid "Usage:"
-msgstr ""
+msgstr "Utilização:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:29
 msgid "OPTION"
-msgstr ""
+msgstr "OPÇÃO"
 
 #: ../panel-plugin/xfce4-popup-places.sh:31
 msgid "Options:"
-msgstr ""
+msgstr "Opções:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:32
 msgid "Popup menu at current mouse position"
-msgstr ""
+msgstr "Abrir menu na posição do cursor"
 
 #: ../panel-plugin/xfce4-popup-places.sh:33
-#, fuzzy
 msgid "Show help options"
-msgstr "Mostrar opção d_e limpar"
+msgstr "Mostrar ajuda"
 
 #: ../panel-plugin/xfce4-popup-places.sh:34
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Mostra as informações da versão e sai"

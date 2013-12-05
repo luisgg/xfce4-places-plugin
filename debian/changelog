@@ -1,49 +1,43 @@
-xfce4-places-plugin (1.5.0-0ubuntu1~ppa0.12.04.1+aurex1) precise; urgency=low
+xfce4-places-plugin (1.6.0-1~ppa0.12.04.1) precise; urgency=low
 
-  * Added 30_places-plugin_add_network_menu.patch. The patch
-    adds 'Network' and 'Connect to Server' items.
-  * Updated spanish translation
+  * Upload to the xfce-4.10 ppa.
 
- -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 27 Nov 2012 08:57:37 +0100
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 05 Dec 2013 20:03:33 +0100
 
-xfce4-places-plugin (1.5.0-0ubuntu1~ppa0.12.04.1) precise; urgency=low
+xfce4-places-plugin (1.6.0-1) unstable; urgency=low
 
-  * Precise backport for the xfce-4.10 ppa.
+  [ Evgeni Golov ]
+  * Correct Vcs-* URLs to point to anonscm.debian.org
 
- -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 09 Nov 2012 23:19:20 +0100
+  [ Yves-Alexis Perez ]
+  * New upstream release.
 
-xfce4-places-plugin (1.5.0-0ubuntu1) raring; urgency=low
+  [ Jackson Doak ]
+  * debian/rules: Use --disable-silent-rules
 
-  * New upstream release. lp: #1066695
-  * debian/patches:
-    - 01_fix-mount-and-open, 02_save-config-file, 03_use-preferred-filemanager:
-      dropped, included upstream.
-  * debian/rules: delete unneeded .la files.
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 26 Nov 2013 20:34:09 +0100
 
- -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Fri, 09 Nov 2012 22:40:15 +0100
+xfce4-places-plugin (1.5.0-1) unstable; urgency=low
 
-xfce4-places-plugin (1.3.0-1ubuntu1) quantal; urgency=low
+  [ Yves-Alexis Perez ]
+  * New upstream release.                              closes: #691876, #690980
+  * debian/rules:
+    - remove .la files
+    - disable static build just in case
+    - enable all hardening flags.
+  * debian/xfce4-places-plugin.lintian-overrides:
+    - add override for no-fortify since we do use hardening flags, it's just a
+      false positive.
+  * debian/control:
+    - remove uneeded versions in build-deps since Xfce 4.8 is in stable now.
+    - remove dpkg-dev build-dep, hardening support is present in stable dpkg.
+    - update standards version to 3.9.4.
 
-  * debian/patches:
-    - 01_fix-mount-and-open: added, let "mount and open" option actually open
-      a file manager window (LP: #1006733)
-    - 02_save-config-file: added, save changes when the config dialog is closed.
-    - 03_use-preferred-filemanager: added, call the exo's preferred file manager
-      instead of Thunar (LP: #980756)
+  [ Daniel Echeverry ]
+  * Update to DEP5 copyright format 1.0
+  * Add xfce4-popup-places manpage
 
- -- Jan Hrdina <jan.hrdka@gmail.com>  Tue, 11 Sep 2012 20:14:28 +0200
-
-xfce4-places-plugin (1.3.0-1build2) quantal; urgency=low
-
-  * No change rebuild against xfce4-panel 4.10.
-
- -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Sat, 19 May 2012 14:02:14 +0200
-
-xfce4-places-plugin (1.3.0-1build1) quantal; urgency=low
-
-  * No change rebuild to pick updated xfce4-panel shlibs.
-
- -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 17 May 2012 21:23:37 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 25 May 2013 21:14:03 +0200
 
 xfce4-places-plugin (1.3.0-1) unstable; urgency=low
 

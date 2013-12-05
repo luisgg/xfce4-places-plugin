@@ -56,8 +56,6 @@ enum
   PROP_SHOW_VOLUMES,
   PROP_MOUNT_OPEN_VOLUMES,
   PROP_SHOW_BOOKMARKS,
-  PROP_SERVER_CONNECT_CMD,
-  PROP_NETWORK_CMD,
 #if USE_RECENT_DOCUMENTS
   PROP_SHOW_RECENT,
   PROP_SHOW_RECENT_CLEAR,
@@ -127,20 +125,6 @@ places_cfg_class_init (PlacesCfgClass *klass)
                                    g_param_spec_boolean ("show-bookmarks", NULL, NULL,
                                                          TRUE,
                                                          EXO_PARAM_READWRITE));
-
-  g_object_class_install_property (gobject_class,
-                                   PROP_SERVER_CONNECT_CMD,
-                                   g_param_spec_string ("server-connect-cmd",
-                                                        NULL, NULL,
-                                                        "",
-                                                        EXO_PARAM_READWRITE));
-
-  g_object_class_install_property (gobject_class,
-                                   PROP_NETWORK_CMD,
-                                   g_param_spec_string ("network-cmd",
-                                                        NULL, NULL,
-                                                        "",
-                                                        EXO_PARAM_READWRITE));
 
 #if USE_RECENT_DOCUMENTS
   g_object_class_install_property (gobject_class,
@@ -215,8 +199,6 @@ places_cfg_init (PlacesCfg *cfg)
 #endif
   cfg->search_cmd = g_strdup("");
   cfg->label = g_strdup(_("Places"));
-  cfg->server_connect_cmd = g_strdup("");
-  cfg->network_cmd = g_strdup("exo-open --launch FileManager network:///");
 }
 
 
@@ -257,14 +239,6 @@ places_cfg_get_property (GObject    *object,
 
     case PROP_SHOW_BOOKMARKS:
       g_value_set_boolean (value, cfg->show_bookmarks);
-      break;
-
-    case PROP_SERVER_CONNECT_CMD:
-      g_value_set_string (value, cfg->server_connect_cmd);
-      break;
-
-    case PROP_NETWORK_CMD:
-      g_value_set_string (value, cfg->network_cmd);
       break;
 
 #if USE_RECENT_DOCUMENTS
@@ -364,28 +338,6 @@ places_cfg_set_property (GObject      *object,
         {
           cfg->show_bookmarks = val;
           g_signal_emit (G_OBJECT (cfg), places_cfg_signals[MODEL_CHANGED], 0);
-        }
-      break;
-
-    case PROP_SERVER_CONNECT_CMD:
-      text = g_value_get_string (value);
-      if (strcmp(cfg->server_connect_cmd, text))
-        {
-          if (cfg->server_connect_cmd != NULL)
-            g_free (cfg->server_connect_cmd);
-          cfg->server_connect_cmd = g_value_dup_string (value);
-          g_signal_emit (G_OBJECT (cfg), places_cfg_signals[MENU_CHANGED], 0);
-        }
-      break;
-
-    case PROP_NETWORK_CMD:
-      text = g_value_get_string (value);
-      if (strcmp(cfg->network_cmd, text))
-        {
-          if (cfg->network_cmd != NULL)
-            g_free (cfg->network_cmd);
-          cfg->network_cmd = g_value_dup_string (value);
-          g_signal_emit (G_OBJECT (cfg), places_cfg_signals[MENU_CHANGED], 0);
         }
       break;
 
@@ -669,10 +621,6 @@ places_cfg_finalize (GObject *object)
 
     if(cfg->label != NULL)
         g_free(cfg->label);
-    if(cfg->server_connect_cmd != NULL)
-        g_free(cfg->server_connect_cmd);
-    if(cfg->network_cmd != NULL)
-        g_free(cfg->network_cmd);
     if(cfg->search_cmd != NULL)
         g_free(cfg->search_cmd);
 
@@ -715,14 +663,6 @@ places_cfg_new(XfcePanelPlugin *plugin)
 
     property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/show-bookmarks", NULL);
     xfconf_g_property_bind (channel, property, G_TYPE_BOOLEAN, cfg, "show-bookmarks");
-    g_free (property);
-
-    property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/server-connect-cmd", NULL);
-    xfconf_g_property_bind (channel, property, G_TYPE_STRING, cfg, "server-connect-cmd");
-    g_free (property);
-
-    property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/network-cmd", NULL);
-    xfconf_g_property_bind (channel, property, G_TYPE_STRING, cfg, "network-cmd");
     g_free (property);
 
     property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/show-recent", NULL);

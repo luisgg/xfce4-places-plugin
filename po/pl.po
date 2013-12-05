@@ -1,33 +1,36 @@
-# Polish translations for xfce4-places-plugin.
-# Copyright (C) 2002-2006 The Xfce development team.
-# This file is distributed under the same license as the xfce4-places-plugin package.
-# Piotr Maliński <admin@rk.edu.pl>, 2006.
-# Tomasz Michał Łukaszewski <T.Lukaszewski@aster.pl>, 2006.
-# Szymon Kałasz <szymon_maestro@gazeta.pl>, 2007.
-# Piotr Sokół <piotr.sokol@10g.pl>, 2009.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Michał Jeż <michal.je2u@gmail.com>, 2012
+# Piotr Maliński <admin@rk.edu.pl>, 2006
+# Piotr Sokół <psokol@jabster.pl>, 2009,2012-2013
+# Szymon Kałasz <szymon_maestro@gazeta.pl>, 2007
+# Tomasz Michał Łukaszewski <T.Lukaszewski@aster.pl>, 2006
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 01:15+0100\n"
-"PO-Revision-Date: 2009-04-10 12:55+0100\n"
-"Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
-"Language-Team: \n"
-"Language: \n"
+"POT-Creation-Date: 2013-11-10 18:31+0100\n"
+"PO-Revision-Date: 2013-11-11 10:11+0000\n"
+"Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/xfce/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
-#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
+#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
 msgid "Places"
 msgstr "Miejsca"
 
 #: ../panel-plugin/places.desktop.in.h:2
 msgid "Access folders, documents, and removable media"
-msgstr "Umożliwia dostęp do katalogów, dokumentów i pamięci wymiennej"
+msgstr "Umożliwia dostęp do katalogów, dokumentów i nośników wymiennych"
 
 #. Trash
 #: ../panel-plugin/model_system.c:155
@@ -42,6 +45,12 @@ msgstr "Pulpit"
 #: ../panel-plugin/model_system.c:205
 msgid "File System"
 msgstr "System plików"
+
+#. TRANSLATORS: this will result in "<path> on <hostname>"
+#: ../panel-plugin/model_user.c:242
+#, c-format
+msgid "%s on %s"
+msgstr "%s na %s"
 
 #: ../panel-plugin/model_volumes.c:71
 #, c-format
@@ -77,128 +86,116 @@ msgstr "Odmontuj"
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:128
 msgid "Unmounting device"
-msgstr "Odmontowywanie napędu"
+msgstr "Odmontowywanie urządzenia"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:131
 #, c-format
 msgid ""
-"The device \"%s\" is being unmounted by the system. Please do not remove the "
-"media or disconnect the drive"
-msgstr ""
-"Urządzenie \"%s\" jest właśnie odmontowywane przez system. Proszę nie usuwać "
-"nośnika lub nie odłączać napędu"
+"The device \"%s\" is being unmounted by the system. Please do not remove the"
+" media or disconnect the drive"
+msgstr "Urządzenie „%s” jest w trakcie odmontowywania. Proszę nie usuwać nośnika lub nie odłączać napędu."
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:138
 #: ../panel-plugin/model_volumes_notify.c:262
 msgid "Writing data to device"
-msgstr "Zapisywanie danych na urządzenie"
+msgstr "Zapisywanie danych na urządzeniu"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:141
 #: ../panel-plugin/model_volumes_notify.c:265
 #, c-format
 msgid ""
-"There is data that needs to be written to the device \"%s\" before it can be "
-"removed. Please do not remove the media or disconnect the drive"
-msgstr ""
-"Niektóre dane muszą zostać zapisane na urządzenie \"%s\" zanim nie zostanie "
-"ono usunięte. Proszę nie usuwać nośnika lub nie odłączać napędu"
+"There is data that needs to be written to the device \"%s\" before it can be"
+" removed. Please do not remove the media or disconnect the drive"
+msgstr "Niektóre dane muszą zostać zapisane na urządzeniu „%s” przed jego wysunięciem. Proszę nie wysuwać nośnika bądź odłączać napędu."
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:253
 msgid "Ejecting device"
-msgstr "Wysuwanie napędu"
+msgstr "Wysuwanie urządzenia"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:256
 #, c-format
 msgid "The device \"%s\" is being ejected. This may take some time"
-msgstr "Urządzenie \"%s\" jest właśnie wysuwane. Może to zająć chwilę"
+msgstr "Urządzenie „%s” jest w trakcie wysuwania. Może to chwilę potrwać."
 
-#: ../panel-plugin/view.c:633
-msgid "Network"
-msgstr ""
-
-#: ../panel-plugin/view.c:651
-msgid "Connect to Server"
-msgstr ""
-
-#: ../panel-plugin/view.c:680
+#: ../panel-plugin/view.c:637
 msgid "Search for Files"
-msgstr "Szukaj..."
+msgstr "Wyszukaj pliki..."
 
-#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
+#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
 msgid "Recent Documents"
 msgstr "Ostatnio otwarte"
 
-#: ../panel-plugin/cfg.c:490
+#: ../panel-plugin/cfg.c:442
 msgid "Button"
 msgstr "Przycisk"
 
-#: ../panel-plugin/cfg.c:499
+#: ../panel-plugin/cfg.c:451
 msgid "_Show"
 msgstr "_Wyświetlanie:"
 
-#: ../panel-plugin/cfg.c:505
+#: ../panel-plugin/cfg.c:457
 msgid "Icon Only"
 msgstr "Ikona"
 
-#: ../panel-plugin/cfg.c:506
+#: ../panel-plugin/cfg.c:458
 msgid "Label Only"
 msgstr "Etykieta"
 
-#: ../panel-plugin/cfg.c:507
+#: ../panel-plugin/cfg.c:459
 msgid "Icon and Label"
 msgstr "Ikona i etykieta"
 
-#: ../panel-plugin/cfg.c:520
+#: ../panel-plugin/cfg.c:472
 msgid "_Label"
 msgstr "_Etykieta:"
 
-#: ../panel-plugin/cfg.c:536
+#: ../panel-plugin/cfg.c:488
 msgid "Menu"
 msgstr "Menu"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:492
 msgid "Show _icons in menu"
 msgstr "_Ikony w menu"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:549
+#: ../panel-plugin/cfg.c:501
 msgid "Show _removable media"
 msgstr "_Pamięć wymienna"
 
-#: ../panel-plugin/cfg.c:567
+#: ../panel-plugin/cfg.c:519
 msgid "Mount and _Open on click"
 msgstr "_Montowanie i otwieranie po kliknięciu"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:578
+#: ../panel-plugin/cfg.c:530
 msgid "Show GTK _bookmarks"
-msgstr "_Zakładki GTK"
+msgstr "_Zakładki"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:588
+#: ../panel-plugin/cfg.c:540
 msgid "Show recent _documents"
-msgstr "Ostatnio otwarte"
+msgstr "Ostatnio otwarte _dokumenty"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:607
+#: ../panel-plugin/cfg.c:559
 msgid "Show cl_ear option"
 msgstr "Polecenie „Wy_czyść”"
 
-#: ../panel-plugin/cfg.c:619
+#: ../panel-plugin/cfg.c:571
 msgid "_Number to display"
 msgstr "I_lość elementów:"
 
-#: ../panel-plugin/cfg.c:639
+#: ../panel-plugin/cfg.c:591
 msgid "Search"
 msgstr "Wyszukiwanie"
 
-#: ../panel-plugin/cfg.c:647
+#: ../panel-plugin/cfg.c:599
 msgid "Co_mmand"
 msgstr "P_olecenie:"
 
@@ -212,25 +209,24 @@ msgstr "Otwórz w terminalu"
 
 #: ../panel-plugin/xfce4-popup-places.sh:28
 msgid "Usage:"
-msgstr ""
+msgstr "Użycie:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:29
 msgid "OPTION"
-msgstr ""
+msgstr "OPCJA"
 
 #: ../panel-plugin/xfce4-popup-places.sh:31
 msgid "Options:"
-msgstr ""
+msgstr "Opcje:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:32
 msgid "Popup menu at current mouse position"
-msgstr ""
+msgstr "Wyświetla menu w bieżącym położeniu kursora myszy"
 
 #: ../panel-plugin/xfce4-popup-places.sh:33
-#, fuzzy
 msgid "Show help options"
-msgstr "Polecenie „Wy_czyść”"
+msgstr "Wypisuje komunikat pomocy"
 
 #: ../panel-plugin/xfce4-popup-places.sh:34
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Wypisuje informacje o wersji i kończy"

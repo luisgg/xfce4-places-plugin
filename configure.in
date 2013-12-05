@@ -6,7 +6,7 @@ dnl
 dnl xfce4-places-plugin
 
 dnl version info
-m4_define([places_version], [1.5.0])
+m4_define([places_version], [1.6.0])
 
 dnl initialize autoconf
 AC_COPYRIGHT([Copyright (c) 2007-2009 Diego Ongaro <ongardie@gmail.com>])
@@ -51,7 +51,7 @@ XDT_CHECK_OPTIONAL_PACKAGE([LIBNOTIFY], [libnotify], [0.4.0], [notifications],
                            [Mount notification support], [yes])
 
 dnl check for i18n support
-XDT_I18N([ar ast be ca cs da de dz el en_GB eo es et eu fi fr gl he hr hu id is it ja ka kk ko lt lv mk nb nl pa pl pt_BR pt ro ru sk sq sr sv tr ug uk ur_PK ur zh_CN zh_TW ])
+XDT_I18N([ar ast be bg ca cs da de el en_AU en_GB eo es et eu fi fr gl he hr hu id is it ja kk ko lt lv nb nl pa pl pt_BR pt ro ru sk sq sr sv th tr ug uk ur_PK ur zh_CN zh_TW ])
 
 XDT_FEATURE_DEBUG()
 

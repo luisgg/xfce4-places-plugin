@@ -37,8 +37,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 01:15+0100\n"
-"PO-Revision-Date: 2012-04-25 20:38+0900\n"
+"POT-Creation-Date: 2012-09-30 13:01+0900\n"
+"PO-Revision-Date: 2012-09-30 13:09+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -47,8 +47,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
-#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
+#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
 msgid "Places"
 msgstr "場所"
 
@@ -144,88 +144,80 @@ msgstr "デバイスを取り出しています"
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr "デバイス \\\"%s\\\" を取り出しています。少々お待ちください。"
 
-#: ../panel-plugin/view.c:633
-msgid "Network"
-msgstr ""
-
-#: ../panel-plugin/view.c:651
-msgid "Connect to Server"
-msgstr ""
-
-#: ../panel-plugin/view.c:680
+#: ../panel-plugin/view.c:637
 msgid "Search for Files"
 msgstr "ファイルの検索"
 
-#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
+#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
 msgid "Recent Documents"
 msgstr "最近開いたドキュメント"
 
-#: ../panel-plugin/cfg.c:490
+#: ../panel-plugin/cfg.c:442
 msgid "Button"
 msgstr "ボタン"
 
-#: ../panel-plugin/cfg.c:499
+#: ../panel-plugin/cfg.c:451
 msgid "_Show"
 msgstr "表示(_S)"
 
-#: ../panel-plugin/cfg.c:505
+#: ../panel-plugin/cfg.c:457
 msgid "Icon Only"
 msgstr "アイコンのみ"
 
-#: ../panel-plugin/cfg.c:506
+#: ../panel-plugin/cfg.c:458
 msgid "Label Only"
 msgstr "ラベルのみ"
 
-#: ../panel-plugin/cfg.c:507
+#: ../panel-plugin/cfg.c:459
 msgid "Icon and Label"
 msgstr "アイコンとラベル"
 
-#: ../panel-plugin/cfg.c:520
+#: ../panel-plugin/cfg.c:472
 msgid "_Label"
 msgstr "ラベル(_L)"
 
-#: ../panel-plugin/cfg.c:536
+#: ../panel-plugin/cfg.c:488
 msgid "Menu"
 msgstr "メニュー"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:492
 msgid "Show _icons in menu"
 msgstr "メニューにアイコンを表示する(_I)"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:549
+#: ../panel-plugin/cfg.c:501
 msgid "Show _removable media"
 msgstr "リムーバブルメディアを表示する(_R)"
 
-#: ../panel-plugin/cfg.c:567
+#: ../panel-plugin/cfg.c:519
 msgid "Mount and _Open on click"
 msgstr "クリックでマウントして開く(_O)"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:578
+#: ../panel-plugin/cfg.c:530
 msgid "Show GTK _bookmarks"
 msgstr "GTK ブックマークを表示する(_B)"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:588
+#: ../panel-plugin/cfg.c:540
 msgid "Show recent _documents"
 msgstr "最近開いたドキュメントを表示する(_D)"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:607
+#: ../panel-plugin/cfg.c:559
 msgid "Show cl_ear option"
 msgstr "クリアオプションを表示する(_E)"
 
-#: ../panel-plugin/cfg.c:619
+#: ../panel-plugin/cfg.c:571
 msgid "_Number to display"
 msgstr "表示する数(_N)"
 
-#: ../panel-plugin/cfg.c:639
+#: ../panel-plugin/cfg.c:591
 msgid "Search"
 msgstr "検索"
 
-#: ../panel-plugin/cfg.c:647
+#: ../panel-plugin/cfg.c:599
 msgid "Co_mmand"
 msgstr "コマンド(_M)"
 
@@ -239,25 +231,24 @@ msgstr "ターミナルで開く"
 
 #: ../panel-plugin/xfce4-popup-places.sh:28
 msgid "Usage:"
-msgstr ""
+msgstr "使用法:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:29
 msgid "OPTION"
-msgstr ""
+msgstr "オプション"
 
 #: ../panel-plugin/xfce4-popup-places.sh:31
 msgid "Options:"
-msgstr ""
+msgstr "オプション:"
 
 #: ../panel-plugin/xfce4-popup-places.sh:32
 msgid "Popup menu at current mouse position"
-msgstr ""
+msgstr "現在のマウスの位置にメニューをポップアップする"
 
 #: ../panel-plugin/xfce4-popup-places.sh:33
-#, fuzzy
 msgid "Show help options"
-msgstr "クリアオプションを表示する(_E)"
+msgstr "ヘルプオプションを表示する"
 
 #: ../panel-plugin/xfce4-popup-places.sh:34
 msgid "Print version information and exit"
-msgstr ""
+msgstr "バージョン情報を表示して終了する"
