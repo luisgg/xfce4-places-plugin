@@ -60,6 +60,8 @@ struct _PlacesCfg
 #endif
     gchar               *label;
     gchar               *search_cmd;
+    gchar               *server_connect_cmd;
+    gchar               *network_cmd;
 
 };
 
