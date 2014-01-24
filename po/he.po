@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 01:15+0100\n"
+"POT-Creation-Date: 2012-09-28 17:07+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Isratine Citizen <genghiskhan@gmx.ca>\n"
 "Language-Team: Gezer <gezer@lists.launchpad.net>\n"
@@ -33,8 +33,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
-#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
+#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
 msgid "Places"
 msgstr "מקומות"
 
@@ -129,88 +129,80 @@ msgstr "ההתקן נשלף"
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr "ההתקן \"%s\" נשלף כעת. פעולה זו עלולה לארוך זמן מה"
 
-#: ../panel-plugin/view.c:633
-msgid "Network"
-msgstr ""
-
-#: ../panel-plugin/view.c:651
-msgid "Connect to Server"
-msgstr ""
-
-#: ../panel-plugin/view.c:680
+#: ../panel-plugin/view.c:637
 msgid "Search for Files"
 msgstr "חיפוש אחר קבצים"
 
-#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
+#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
 msgid "Recent Documents"
 msgstr "מסמכים אחרונים"
 
-#: ../panel-plugin/cfg.c:490
+#: ../panel-plugin/cfg.c:442
 msgid "Button"
 msgstr "לחצן"
 
-#: ../panel-plugin/cfg.c:499
+#: ../panel-plugin/cfg.c:451
 msgid "_Show"
 msgstr "ה_צגה"
 
-#: ../panel-plugin/cfg.c:505
+#: ../panel-plugin/cfg.c:457
 msgid "Icon Only"
 msgstr "סמל בלבד"
 
-#: ../panel-plugin/cfg.c:506
+#: ../panel-plugin/cfg.c:458
 msgid "Label Only"
 msgstr "תווית בלבד"
 
-#: ../panel-plugin/cfg.c:507
+#: ../panel-plugin/cfg.c:459
 msgid "Icon and Label"
 msgstr "סמל ותווית"
 
-#: ../panel-plugin/cfg.c:520
+#: ../panel-plugin/cfg.c:472
 msgid "_Label"
 msgstr "_תווית"
 
-#: ../panel-plugin/cfg.c:536
+#: ../panel-plugin/cfg.c:488
 msgid "Menu"
 msgstr "תפריט"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:492
 msgid "Show _icons in menu"
 msgstr "הצגת _סמלים בתפריט"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:549
+#: ../panel-plugin/cfg.c:501
 msgid "Show _removable media"
 msgstr "הצגת מדיה נ_שלפת"
 
-#: ../panel-plugin/cfg.c:567
+#: ../panel-plugin/cfg.c:519
 msgid "Mount and _Open on click"
 msgstr "עיגון ופתיחה ב_לחיצה"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:578
+#: ../panel-plugin/cfg.c:530
 msgid "Show GTK _bookmarks"
 msgstr "הצגת _סימניות GTK"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:588
+#: ../panel-plugin/cfg.c:540
 msgid "Show recent _documents"
 msgstr "ה_צגת המסמכים האחרונים"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:607
+#: ../panel-plugin/cfg.c:559
 msgid "Show cl_ear option"
 msgstr "הצגת אפשרות ל_נקות"
 
-#: ../panel-plugin/cfg.c:619
+#: ../panel-plugin/cfg.c:571
 msgid "_Number to display"
 msgstr "מ_ספר להצגה"
 
-#: ../panel-plugin/cfg.c:639
+#: ../panel-plugin/cfg.c:591
 msgid "Search"
 msgstr "חיפוש"
 
-#: ../panel-plugin/cfg.c:647
+#: ../panel-plugin/cfg.c:599
 msgid "Co_mmand"
 msgstr "פ_קודה"
 

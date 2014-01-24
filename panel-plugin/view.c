@@ -620,49 +620,6 @@ pview_update_menu(PlacesView *pd)
         bookmark_group_li = bookmark_group_li->next;
     }
 
-    /* "Network Options" -> separator */
-    if((pd->cfg->network_cmd != NULL && *pd->cfg->network_cmd != '\0') || (pd->cfg->server_connect_cmd != NULL && *pd->cfg->server_connect_cmd != '\0')){
-        separator = gtk_separator_menu_item_new();
-        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), separator);
-        gtk_widget_show(separator);
-    }
-
-    /* Network */
-    if(pd->cfg->network_cmd != NULL && *pd->cfg->network_cmd != '\0'){
-
-        GtkWidget *network_item = gtk_image_menu_item_new_with_mnemonic(_("Network"));
-        
-        if(pd->cfg->show_icons){
-            GtkWidget *network_image = gtk_image_new_from_icon_name("network-workgroup", GTK_ICON_SIZE_MENU);
-            gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(network_item), network_image);
-        }
-        
-        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), network_item);
-        gtk_widget_show(network_item);
-        
-        g_signal_connect_swapped(network_item, "activate",
-                                 G_CALLBACK(places_gui_exec), pd->cfg->network_cmd);
-
-    }
-
-    /* Connect to Server */
-    if(pd->cfg->server_connect_cmd != NULL && *pd->cfg->server_connect_cmd != '\0'){
-
-        GtkWidget *server_connect_item = gtk_image_menu_item_new_with_mnemonic(_("Connect to Server"));
-        
-        if(pd->cfg->show_icons){
-            GtkWidget *server_connect_image = gtk_image_new_from_icon_name("applications-internet", GTK_ICON_SIZE_MENU);
-            gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(server_connect_item), server_connect_image);
-        }
-        
-        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), server_connect_item);
-        gtk_widget_show(server_connect_item);
-        
-        g_signal_connect_swapped(server_connect_item, "activate",
-                                 G_CALLBACK(places_gui_exec), pd->cfg->server_connect_cmd);
-
-    }
-
     /* "Search for Files" or "Recent Documents" -> separator */
 #if USE_RECENT_DOCUMENTS
     if(pd->cfg->show_recent || (pd->cfg->search_cmd != NULL && *pd->cfg->search_cmd != '\0')){
