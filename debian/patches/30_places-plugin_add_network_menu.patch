@@ -1,0 +1,191 @@
+Description:
+ Add 'Connect to server' and 'Network' options to places menu to mimic
+ Gnome2 Places menu.
+ .
+ xfce4-places-plugin (1.5.0-0ubuntu1~ppa0.12.04.1) precise; urgency=low
+ .
+   * Precise backport for the xfce-4.10 ppa.
+Author: Lionel Le Folgoc <mrpouit@ubuntu.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: aurex, https://github.com/luisgg/xfce4-places-plugin
+Last-Update: <2012-11-23>
+
+--- xfce4-places-plugin-1.5.0.orig/panel-plugin/cfg.c
++++ xfce4-places-plugin-1.5.0/panel-plugin/cfg.c
+@@ -56,6 +56,8 @@ enum
+   PROP_SHOW_VOLUMES,
+   PROP_MOUNT_OPEN_VOLUMES,
+   PROP_SHOW_BOOKMARKS,
++  PROP_SERVER_CONNECT_CMD,
++  PROP_NETWORK_CMD,
+ #if USE_RECENT_DOCUMENTS
+   PROP_SHOW_RECENT,
+   PROP_SHOW_RECENT_CLEAR,
+@@ -126,6 +128,20 @@ places_cfg_class_init (PlacesCfgClass *k
+                                                          TRUE,
+                                                          EXO_PARAM_READWRITE));
+ 
++  g_object_class_install_property (gobject_class,
++                                   PROP_SERVER_CONNECT_CMD,
++                                   g_param_spec_string ("server-connect-cmd",
++                                                        NULL, NULL,
++                                                        "",
++                                                        EXO_PARAM_READWRITE));
++
++  g_object_class_install_property (gobject_class,
++                                   PROP_NETWORK_CMD,
++                                   g_param_spec_string ("network-cmd",
++                                                        NULL, NULL,
++                                                        "",
++                                                        EXO_PARAM_READWRITE));
++
+ #if USE_RECENT_DOCUMENTS
+   g_object_class_install_property (gobject_class,
+                                    PROP_SHOW_RECENT,
+@@ -199,6 +215,8 @@ places_cfg_init (PlacesCfg *cfg)
+ #endif
+   cfg->search_cmd = g_strdup("");
+   cfg->label = g_strdup(_("Places"));
++  cfg->server_connect_cmd = g_strdup("");
++  cfg->network_cmd = g_strdup("exo-open --launch FileManager network:///");
+ }
+ 
+ 
+@@ -241,6 +259,14 @@ places_cfg_get_property (GObject    *obj
+       g_value_set_boolean (value, cfg->show_bookmarks);
+       break;
+ 
++    case PROP_SERVER_CONNECT_CMD:
++      g_value_set_string (value, cfg->server_connect_cmd);
++      break;
++
++    case PROP_NETWORK_CMD:
++      g_value_set_string (value, cfg->network_cmd);
++      break;
++
+ #if USE_RECENT_DOCUMENTS
+     case PROP_SHOW_RECENT:
+       g_value_set_boolean (value, cfg->show_recent);
+@@ -341,6 +367,28 @@ places_cfg_set_property (GObject      *o
+         }
+       break;
+ 
++    case PROP_SERVER_CONNECT_CMD:
++      text = g_value_get_string (value);
++      if (strcmp(cfg->server_connect_cmd, text))
++        {
++          if (cfg->server_connect_cmd != NULL)
++            g_free (cfg->server_connect_cmd);
++          cfg->server_connect_cmd = g_value_dup_string (value);
++          g_signal_emit (G_OBJECT (cfg), places_cfg_signals[MENU_CHANGED], 0);
++        }
++      break;
++
++    case PROP_NETWORK_CMD:
++      text = g_value_get_string (value);
++      if (strcmp(cfg->network_cmd, text))
++        {
++          if (cfg->network_cmd != NULL)
++            g_free (cfg->network_cmd);
++          cfg->network_cmd = g_value_dup_string (value);
++          g_signal_emit (G_OBJECT (cfg), places_cfg_signals[MENU_CHANGED], 0);
++        }
++      break;
++
+ #if USE_RECENT_DOCUMENTS
+     case PROP_SHOW_RECENT:
+       val = g_value_get_boolean (value);
+@@ -621,6 +669,10 @@ places_cfg_finalize (GObject *object)
+ 
+     if(cfg->label != NULL)
+         g_free(cfg->label);
++    if(cfg->server_connect_cmd != NULL)
++        g_free(cfg->server_connect_cmd);
++    if(cfg->network_cmd != NULL)
++        g_free(cfg->network_cmd);
+     if(cfg->search_cmd != NULL)
+         g_free(cfg->search_cmd);
+ 
+@@ -665,6 +717,14 @@ places_cfg_new(XfcePanelPlugin *plugin)
+     xfconf_g_property_bind (channel, property, G_TYPE_BOOLEAN, cfg, "show-bookmarks");
+     g_free (property);
+ 
++    property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/server-connect-cmd", NULL);
++    xfconf_g_property_bind (channel, property, G_TYPE_STRING, cfg, "server-connect-cmd");
++    g_free (property);
++
++    property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/network-cmd", NULL);
++    xfconf_g_property_bind (channel, property, G_TYPE_STRING, cfg, "network-cmd");
++    g_free (property);
++
+     property = g_strconcat (xfce_panel_plugin_get_property_base (plugin), "/show-recent", NULL);
+     xfconf_g_property_bind (channel, property, G_TYPE_BOOLEAN, cfg, "show-recent");
+     g_free (property);
+--- xfce4-places-plugin-1.5.0.orig/panel-plugin/cfg.h
++++ xfce4-places-plugin-1.5.0/panel-plugin/cfg.h
+@@ -60,6 +60,8 @@ struct _PlacesCfg
+ #endif
+     gchar               *label;
+     gchar               *search_cmd;
++    gchar               *server_connect_cmd;
++    gchar               *network_cmd;
+ 
+ };
+ 
+--- xfce4-places-plugin-1.5.0.orig/panel-plugin/view.c
++++ xfce4-places-plugin-1.5.0/panel-plugin/view.c
+@@ -620,6 +620,49 @@ pview_update_menu(PlacesView *pd)
+         bookmark_group_li = bookmark_group_li->next;
+     }
+ 
++    /* "Network Options" -> separator */
++    if((pd->cfg->network_cmd != NULL && *pd->cfg->network_cmd != '\0') || (pd->cfg->server_connect_cmd != NULL && *pd->cfg->server_connect_cmd != '\0')){
++        separator = gtk_separator_menu_item_new();
++        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), separator);
++        gtk_widget_show(separator);
++    }
++
++    /* Network */
++    if(pd->cfg->network_cmd != NULL && *pd->cfg->network_cmd != '\0'){
++
++        GtkWidget *network_item = gtk_image_menu_item_new_with_mnemonic(_("Network"));
++        
++        if(pd->cfg->show_icons){
++            GtkWidget *network_image = gtk_image_new_from_icon_name("network-workgroup", GTK_ICON_SIZE_MENU);
++            gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(network_item), network_image);
++        }
++        
++        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), network_item);
++        gtk_widget_show(network_item);
++        
++        g_signal_connect_swapped(network_item, "activate",
++                                 G_CALLBACK(places_gui_exec), pd->cfg->network_cmd);
++
++    }
++
++    /* Connect to Server */
++    if(pd->cfg->server_connect_cmd != NULL && *pd->cfg->server_connect_cmd != '\0'){
++
++        GtkWidget *server_connect_item = gtk_image_menu_item_new_with_mnemonic(_("Connect to Server"));
++        
++        if(pd->cfg->show_icons){
++            GtkWidget *server_connect_image = gtk_image_new_from_icon_name("applications-internet", GTK_ICON_SIZE_MENU);
++            gtk_image_menu_item_set_image(GTK_IMAGE_MENU_ITEM(server_connect_item), server_connect_image);
++        }
++        
++        gtk_menu_shell_append(GTK_MENU_SHELL(pd->menu), server_connect_item);
++        gtk_widget_show(server_connect_item);
++        
++        g_signal_connect_swapped(server_connect_item, "activate",
++                                 G_CALLBACK(places_gui_exec), pd->cfg->server_connect_cmd);
++
++    }
++
+     /* "Search for Files" or "Recent Documents" -> separator */
+ #if USE_RECENT_DOCUMENTS
+     if(pd->cfg->show_recent || (pd->cfg->search_cmd != NULL && *pd->cfg->search_cmd != '\0')){
