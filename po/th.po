@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Theppitak Karoonboonyanan <thep@linux.thai.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-10 18:31+0100\n"
+"POT-Creation-Date: 2014-01-24 17:56+0100\n"
 "PO-Revision-Date: 2013-11-11 07:01+0000\n"
 "Last-Translator: theppitak <theppitak@gmail.com>\n"
 "Language-Team: Thai (http://www.transifex.com/projects/p/xfce/language/th/)\n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
-#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
+#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
 msgid "Places"
 msgstr "ที่หลักๆ"
 
@@ -88,8 +88,8 @@ msgstr "กำลังเลิกเมานท์อุปกรณ์"
 #: ../panel-plugin/model_volumes_notify.c:131
 #, c-format
 msgid ""
-"The device \"%s\" is being unmounted by the system. Please do not remove the"
-" media or disconnect the drive"
+"The device \"%s\" is being unmounted by the system. Please do not remove the "
+"media or disconnect the drive"
 msgstr "ระบบกำลังเลิกเมานท์ \"%s\" กรุณาอย่าถอดสื่อหรือตัดการเชื่อมต่อไดรว์"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
@@ -103,9 +103,10 @@ msgstr "กำลังเขียนข้อมูลลงในอุปก
 #: ../panel-plugin/model_volumes_notify.c:265
 #, c-format
 msgid ""
-"There is data that needs to be written to the device \"%s\" before it can be"
-" removed. Please do not remove the media or disconnect the drive"
-msgstr "มีข้อมูลที่ต้องเขียนลงในอุปกรณ์ \"%s\" ก่อนที่จะถอดออกได้ กรุณาอย่าถอดสื่อหรือตัดการเชื่อมต่อไดรว์"
+"There is data that needs to be written to the device \"%s\" before it can be "
+"removed. Please do not remove the media or disconnect the drive"
+msgstr ""
+"มีข้อมูลที่ต้องเขียนลงในอุปกรณ์ \"%s\" ก่อนที่จะถอดออกได้ กรุณาอย่าถอดสื่อหรือตัดการเชื่อมต่อไดรว์"
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:253
@@ -118,80 +119,88 @@ msgstr "กำลังดันสื่อในอุปกรณ์ออก
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr "กำลังดันสื่อในอุปกรณ์ \"%s\" ออก อาจใช้เวลาสักนิด"
 
-#: ../panel-plugin/view.c:637
+#: ../panel-plugin/view.c:633
+msgid "Network"
+msgstr ""
+
+#: ../panel-plugin/view.c:651
+msgid "Connect to Server"
+msgstr ""
+
+#: ../panel-plugin/view.c:680
 msgid "Search for Files"
 msgstr "ค้นหาแฟ้ม"
 
-#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
+#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
 msgid "Recent Documents"
 msgstr "เอกสารล่าสุด"
 
-#: ../panel-plugin/cfg.c:442
+#: ../panel-plugin/cfg.c:490
 msgid "Button"
 msgstr "ปุ่ม"
 
-#: ../panel-plugin/cfg.c:451
+#: ../panel-plugin/cfg.c:499
 msgid "_Show"
 msgstr "แ_สดง"
 
-#: ../panel-plugin/cfg.c:457
+#: ../panel-plugin/cfg.c:505
 msgid "Icon Only"
 msgstr "ไอคอนเท่านั้น"
 
-#: ../panel-plugin/cfg.c:458
+#: ../panel-plugin/cfg.c:506
 msgid "Label Only"
 msgstr "ฉลากเท่านั้น"
 
-#: ../panel-plugin/cfg.c:459
+#: ../panel-plugin/cfg.c:507
 msgid "Icon and Label"
 msgstr "ไอคอนและฉลาก"
 
-#: ../panel-plugin/cfg.c:472
+#: ../panel-plugin/cfg.c:520
 msgid "_Label"
 msgstr "ฉ_ลาก"
 
-#: ../panel-plugin/cfg.c:488
+#: ../panel-plugin/cfg.c:536
 msgid "Menu"
 msgstr "เมนู"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:492
+#: ../panel-plugin/cfg.c:540
 msgid "Show _icons in menu"
 msgstr "แสดงไ_อคอนในเมนู"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:501
+#: ../panel-plugin/cfg.c:549
 msgid "Show _removable media"
 msgstr "แสดงสื่อ_ถอดเสียบ"
 
-#: ../panel-plugin/cfg.c:519
+#: ../panel-plugin/cfg.c:567
 msgid "Mount and _Open on click"
 msgstr "เมานท์และ_เปิดเมื่อคลิก"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:530
+#: ../panel-plugin/cfg.c:578
 msgid "Show GTK _bookmarks"
 msgstr "แสดงที่_คั่นหน้าของ GTK"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:588
 msgid "Show recent _documents"
 msgstr "แสดงเอกสาร_ล่าสุด"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:559
+#: ../panel-plugin/cfg.c:607
 msgid "Show cl_ear option"
 msgstr "แสดงตัวเลือกสำหรับล้า_งข้อมูล"
 
-#: ../panel-plugin/cfg.c:571
+#: ../panel-plugin/cfg.c:619
 msgid "_Number to display"
 msgstr "_จำนวนที่จะแสดง"
 
-#: ../panel-plugin/cfg.c:591
+#: ../panel-plugin/cfg.c:639
 msgid "Search"
 msgstr "ค้นหา"
 
-#: ../panel-plugin/cfg.c:599
+#: ../panel-plugin/cfg.c:647
 msgid "Co_mmand"
 msgstr "คำ_สั่ง"
 

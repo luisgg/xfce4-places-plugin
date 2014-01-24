@@ -7,11 +7,11 @@
 # This file is distributed under the same license as the Thunar package.
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
 # Sergey Fedoseev <fedoseev.sergey@gmail.com>, 2006.
-# 
+#
 # ###
 # translation of ru.po to Russian
 # Copyright (C) 1998-2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
-# 
+#
 # Max Valianskiy <maxcom@vinchi.ru>, 1998-1999.
 # Sergey Panov <sipan@mit.edu>, 1999.
 # Valek Filippov <frob@df.ru>, 2000-2002.
@@ -24,20 +24,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-places-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-28 17:07+0100\n"
+"POT-Creation-Date: 2014-01-24 17:56+0100\n"
 "PO-Revision-Date: 2009-02-19 20:49+0700\n"
 "Last-Translator: Pavel Labushev <p.labushev@gmail.com>\n"
 "Language-Team: Russian <xfce-i18n-ru@xfce.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
-#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
+#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
 msgid "Places"
 msgstr "Переход"
 
@@ -58,6 +58,12 @@ msgstr "Рабочий стол"
 #: ../panel-plugin/model_system.c:205
 msgid "File System"
 msgstr "Файловая система"
+
+#. TRANSLATORS: this will result in "<path> on <hostname>"
+#: ../panel-plugin/model_user.c:242
+#, c-format
+msgid "%s on %s"
+msgstr ""
 
 #: ../panel-plugin/model_volumes.c:71
 #, c-format
@@ -132,80 +138,88 @@ msgstr "Извлечение устройства"
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr "Устройство \"%s\" будет извлечено. Это может занять некоторое время"
 
-#: ../panel-plugin/view.c:637
+#: ../panel-plugin/view.c:633
+msgid "Network"
+msgstr ""
+
+#: ../panel-plugin/view.c:651
+msgid "Connect to Server"
+msgstr ""
+
+#: ../panel-plugin/view.c:680
 msgid "Search for Files"
 msgstr "Найти файлы..."
 
-#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
+#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
 msgid "Recent Documents"
 msgstr "Недавние документы"
 
-#: ../panel-plugin/cfg.c:442
+#: ../panel-plugin/cfg.c:490
 msgid "Button"
 msgstr "Кнопка"
 
-#: ../panel-plugin/cfg.c:451
+#: ../panel-plugin/cfg.c:499
 msgid "_Show"
 msgstr "_Вид"
 
-#: ../panel-plugin/cfg.c:457
+#: ../panel-plugin/cfg.c:505
 msgid "Icon Only"
 msgstr "Значок"
 
-#: ../panel-plugin/cfg.c:458
+#: ../panel-plugin/cfg.c:506
 msgid "Label Only"
 msgstr "Имя"
 
-#: ../panel-plugin/cfg.c:459
+#: ../panel-plugin/cfg.c:507
 msgid "Icon and Label"
 msgstr "Имя и значок"
 
-#: ../panel-plugin/cfg.c:472
+#: ../panel-plugin/cfg.c:520
 msgid "_Label"
 msgstr "_Имя"
 
-#: ../panel-plugin/cfg.c:488
+#: ../panel-plugin/cfg.c:536
 msgid "Menu"
 msgstr "Меню"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:492
+#: ../panel-plugin/cfg.c:540
 msgid "Show _icons in menu"
 msgstr "Показывать _значки в меню"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:501
+#: ../panel-plugin/cfg.c:549
 msgid "Show _removable media"
 msgstr "Показывать съемные _носители"
 
-#: ../panel-plugin/cfg.c:519
+#: ../panel-plugin/cfg.c:567
 msgid "Mount and _Open on click"
 msgstr "_Подключать и открывать том кнопкой мыши"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:530
+#: ../panel-plugin/cfg.c:578
 msgid "Show GTK _bookmarks"
 msgstr "Отображать з_акладки"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:588
 msgid "Show recent _documents"
 msgstr "Отображать список недавних _документов"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:559
+#: ../panel-plugin/cfg.c:607
 msgid "Show cl_ear option"
 msgstr "Добавить кнопку _очистки списка"
 
-#: ../panel-plugin/cfg.c:571
+#: ../panel-plugin/cfg.c:619
 msgid "_Number to display"
 msgstr "_Количество документов в списке"
 
-#: ../panel-plugin/cfg.c:591
+#: ../panel-plugin/cfg.c:639
 msgid "Search"
 msgstr "Поиск"
 
-#: ../panel-plugin/cfg.c:599
+#: ../panel-plugin/cfg.c:647
 msgid "Co_mmand"
 msgstr "Ко_манда"
 

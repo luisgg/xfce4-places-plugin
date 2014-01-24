@@ -14,22 +14,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-places-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-28 17:07+0100\n"
+"POT-Creation-Date: 2014-01-24 17:56+0100\n"
 "PO-Revision-Date: 2013-01-28 10:47+0200\n"
 "Last-Translator: Kiril Kirilov (Cybercop) <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian <cybercop@montana@abv.bg>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bg\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-Country: Bulgaria\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1
-#: ../panel-plugin/cfg.c:102
-#: ../panel-plugin/cfg.c:201
-#: ../panel-plugin/cfg.c:406
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
+#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
 msgid "Places"
 msgstr "Места"
 
@@ -51,6 +49,12 @@ msgstr "Работен плот"
 msgid "File System"
 msgstr "Файлова система"
 
+#. TRANSLATORS: this will result in "<path> on <hostname>"
+#: ../panel-plugin/model_user.c:242
+#, c-format
+msgid "%s on %s"
+msgstr ""
+
 #: ../panel-plugin/model_volumes.c:71
 #, c-format
 msgid "Failed to eject \"%s\""
@@ -61,8 +65,7 @@ msgstr "Неуспешно изваждане на \"%s\""
 msgid "Failed to unmount \"%s\""
 msgstr "Неуспешно демонтиране на \"%s\""
 
-#: ../panel-plugin/model_volumes.c:170
-#: ../panel-plugin/model_volumes.c:193
+#: ../panel-plugin/model_volumes.c:170 ../panel-plugin/model_volumes.c:193
 #, c-format
 msgid "Failed to mount \"%s\""
 msgstr "Неуспешно монтиране на \"%s\""
@@ -91,8 +94,11 @@ msgstr "Демонтиране на устройство"
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:131
 #, c-format
-msgid "The device \"%s\" is being unmounted by the system. Please do not remove the media or disconnect the drive"
-msgstr "Устройството \"%s\"  се демонтира от системата. Моля, не го премахвайте."
+msgid ""
+"The device \"%s\" is being unmounted by the system. Please do not remove the "
+"media or disconnect the drive"
+msgstr ""
+"Устройството \"%s\"  се демонтира от системата. Моля, не го премахвайте."
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:138
@@ -104,8 +110,12 @@ msgstr "Записване на данните на устройството"
 #: ../panel-plugin/model_volumes_notify.c:141
 #: ../panel-plugin/model_volumes_notify.c:265
 #, c-format
-msgid "There is data that needs to be written to the device \"%s\" before it can be removed. Please do not remove the media or disconnect the drive"
-msgstr "Има данни, които трябва да бъдат записани на устройство \"%s\" преди да бъде премахнато. Моля, не го премахвайте."
+msgid ""
+"There is data that needs to be written to the device \"%s\" before it can be "
+"removed. Please do not remove the media or disconnect the drive"
+msgstr ""
+"Има данни, които трябва да бъдат записани на устройство \"%s\" преди да бъде "
+"премахнато. Моля, не го премахвайте."
 
 #. TRANSLATORS: Please use the same translation here as in Thunar
 #: ../panel-plugin/model_volumes_notify.c:253
@@ -118,81 +128,88 @@ msgstr "Изваждане на устройството"
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr "Устройството \"%s\" се изважда. Това може да отнеме известно време"
 
-#: ../panel-plugin/view.c:637
+#: ../panel-plugin/view.c:633
+msgid "Network"
+msgstr ""
+
+#: ../panel-plugin/view.c:651
+msgid "Connect to Server"
+msgstr ""
+
+#: ../panel-plugin/view.c:680
 msgid "Search for Files"
 msgstr "Търсене на файлове"
 
-#: ../panel-plugin/view.c:690
-#: ../panel-plugin/cfg.c:555
+#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
 msgid "Recent Documents"
 msgstr "Последно отваряни документи"
 
-#: ../panel-plugin/cfg.c:442
+#: ../panel-plugin/cfg.c:490
 msgid "Button"
 msgstr "Бутон"
 
-#: ../panel-plugin/cfg.c:451
+#: ../panel-plugin/cfg.c:499
 msgid "_Show"
 msgstr "Показване"
 
-#: ../panel-plugin/cfg.c:457
+#: ../panel-plugin/cfg.c:505
 msgid "Icon Only"
 msgstr "Само икона"
 
-#: ../panel-plugin/cfg.c:458
+#: ../panel-plugin/cfg.c:506
 msgid "Label Only"
 msgstr "Само заглавие"
 
-#: ../panel-plugin/cfg.c:459
+#: ../panel-plugin/cfg.c:507
 msgid "Icon and Label"
 msgstr "Икона и заглавие"
 
-#: ../panel-plugin/cfg.c:472
+#: ../panel-plugin/cfg.c:520
 msgid "_Label"
 msgstr "Заглавие"
 
-#: ../panel-plugin/cfg.c:488
+#: ../panel-plugin/cfg.c:536
 msgid "Menu"
 msgstr "Меню"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:492
+#: ../panel-plugin/cfg.c:540
 msgid "Show _icons in menu"
 msgstr "Показване на икони в менюто"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:501
+#: ../panel-plugin/cfg.c:549
 msgid "Show _removable media"
 msgstr "Показване на преносими устройства"
 
-#: ../panel-plugin/cfg.c:519
+#: ../panel-plugin/cfg.c:567
 msgid "Mount and _Open on click"
 msgstr "Монтиране и отваряне при кликване"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:530
+#: ../panel-plugin/cfg.c:578
 msgid "Show GTK _bookmarks"
 msgstr "Показване на GTK отметки"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:588
 msgid "Show recent _documents"
 msgstr "Показване на последно отваряните документи"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:559
+#: ../panel-plugin/cfg.c:607
 msgid "Show cl_ear option"
 msgstr "Показване на опция за изчистване"
 
-#: ../panel-plugin/cfg.c:571
+#: ../panel-plugin/cfg.c:619
 msgid "_Number to display"
 msgstr "Показван брой"
 
-#: ../panel-plugin/cfg.c:591
+#: ../panel-plugin/cfg.c:639
 msgid "Search"
 msgstr "Търсене"
 
-#: ../panel-plugin/cfg.c:599
+#: ../panel-plugin/cfg.c:647
 msgid "Co_mmand"
 msgstr "Команда"
 
@@ -227,4 +244,3 @@ msgstr "Показване на опции за помощ"
 #: ../panel-plugin/xfce4-popup-places.sh:34
 msgid "Print version information and exit"
 msgstr "Изписване на информация за версията и изход"
-

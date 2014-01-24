@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-places-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-28 17:07+0100\n"
+"POT-Creation-Date: 2014-01-24 17:56+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. vim: set ai et tabstop=4:
-#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:102
-#: ../panel-plugin/cfg.c:201 ../panel-plugin/cfg.c:406
+#: ../panel-plugin/places.desktop.in.h:1 ../panel-plugin/cfg.c:104
+#: ../panel-plugin/cfg.c:217 ../panel-plugin/cfg.c:454
 msgid "Places"
 msgstr "Platser"
 
@@ -40,6 +40,12 @@ msgstr "Skrivbord"
 #: ../panel-plugin/model_system.c:205
 msgid "File System"
 msgstr "Filsystem"
+
+#. TRANSLATORS: this will result in "<path> on <hostname>"
+#: ../panel-plugin/model_user.c:242
+#, c-format
+msgid "%s on %s"
+msgstr ""
 
 #: ../panel-plugin/model_volumes.c:71
 #, c-format
@@ -111,80 +117,88 @@ msgstr ""
 msgid "The device \"%s\" is being ejected. This may take some time"
 msgstr ""
 
-#: ../panel-plugin/view.c:637
+#: ../panel-plugin/view.c:633
+msgid "Network"
+msgstr ""
+
+#: ../panel-plugin/view.c:651
+msgid "Connect to Server"
+msgstr ""
+
+#: ../panel-plugin/view.c:680
 msgid "Search for Files"
 msgstr "Sök efter filer"
 
-#: ../panel-plugin/view.c:690 ../panel-plugin/cfg.c:555
+#: ../panel-plugin/view.c:733 ../panel-plugin/cfg.c:603
 msgid "Recent Documents"
 msgstr "Senaste dokument"
 
-#: ../panel-plugin/cfg.c:442
+#: ../panel-plugin/cfg.c:490
 msgid "Button"
 msgstr "Knapp"
 
-#: ../panel-plugin/cfg.c:451
+#: ../panel-plugin/cfg.c:499
 msgid "_Show"
 msgstr "_Visa"
 
-#: ../panel-plugin/cfg.c:457
+#: ../panel-plugin/cfg.c:505
 msgid "Icon Only"
 msgstr "Endast ikon"
 
-#: ../panel-plugin/cfg.c:458
+#: ../panel-plugin/cfg.c:506
 msgid "Label Only"
 msgstr "Endast etikett"
 
-#: ../panel-plugin/cfg.c:459
+#: ../panel-plugin/cfg.c:507
 msgid "Icon and Label"
 msgstr "Ikon och etikett"
 
-#: ../panel-plugin/cfg.c:472
+#: ../panel-plugin/cfg.c:520
 msgid "_Label"
 msgstr "_Etikett"
 
-#: ../panel-plugin/cfg.c:488
+#: ../panel-plugin/cfg.c:536
 msgid "Menu"
 msgstr "Meny"
 
 #. MENU: Show Icons
-#: ../panel-plugin/cfg.c:492
+#: ../panel-plugin/cfg.c:540
 msgid "Show _icons in menu"
 msgstr "Visa _ikoner i meny"
 
 #. MENU: Show Removable Media
-#: ../panel-plugin/cfg.c:501
+#: ../panel-plugin/cfg.c:549
 msgid "Show _removable media"
 msgstr "Visa _flyttbart media"
 
-#: ../panel-plugin/cfg.c:519
+#: ../panel-plugin/cfg.c:567
 msgid "Mount and _Open on click"
 msgstr "Montera och _öppna vid klick"
 
 #. MENU: Show GTK Bookmarks
-#: ../panel-plugin/cfg.c:530
+#: ../panel-plugin/cfg.c:578
 msgid "Show GTK _bookmarks"
 msgstr "Visa GTK-_bokmärken"
 
 #. MENU: Show Recent Documents
-#: ../panel-plugin/cfg.c:540
+#: ../panel-plugin/cfg.c:588
 msgid "Show recent _documents"
 msgstr "Visa senaste _dokument"
 
 #. RECENT DOCUMENTS: Show clear option
-#: ../panel-plugin/cfg.c:559
+#: ../panel-plugin/cfg.c:607
 msgid "Show cl_ear option"
 msgstr "Visa tö_mningsalternativ"
 
-#: ../panel-plugin/cfg.c:571
+#: ../panel-plugin/cfg.c:619
 msgid "_Number to display"
 msgstr "Visa a_ntal"
 
-#: ../panel-plugin/cfg.c:591
+#: ../panel-plugin/cfg.c:639
 msgid "Search"
 msgstr "Sök"
 
-#: ../panel-plugin/cfg.c:599
+#: ../panel-plugin/cfg.c:647
 msgid "Co_mmand"
 msgstr "Ko_mmando"
 
